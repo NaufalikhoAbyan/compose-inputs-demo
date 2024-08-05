@@ -28,32 +28,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.composeinputsdemo.ui.components.DemoTopAppBar
 import com.example.composeinputsdemo.ui.theme.ComposeInputsDemoTheme
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TextFieldScreen(modifier: Modifier = Modifier, navController: NavController = rememberNavController()) {
     Scaffold(
         topBar = {
-            MediumTopAppBar(
-                title = {
-                    Text(text = "Text Fields Demo", style = MaterialTheme.typography.headlineLarge)
-                },
-                navigationIcon = {
-                    IconButton(
-                        onClick = {
-                            navController.popBackStack()
-                        }
-                    ) {
-                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
-                    }
-                }
-            )
+            DemoTopAppBar(title = "Text Fields Demo", navController = navController)
         }
     ) { innerPadding ->
         Column(
             verticalArrangement = Arrangement.spacedBy(24.dp),
-            modifier = modifier.padding(24.dp).padding(innerPadding)
+            modifier = modifier
+                .padding(24.dp)
+                .padding(innerPadding)
         ) {
             TextFieldDemo()
             OutlinedTextFieldDemo()
