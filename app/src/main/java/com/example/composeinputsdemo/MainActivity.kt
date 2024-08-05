@@ -63,6 +63,15 @@ fun MainScreen(modifier: Modifier = Modifier, navController: NavController = rem
                
                 Text(text = "Text Fields")
             }
+            Button(
+                onClick = {
+                    navController.navigate(Routes.Checkbox.name)
+                },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+
+                Text(text = "Checkboxes")
+            }
         }
     }
 }

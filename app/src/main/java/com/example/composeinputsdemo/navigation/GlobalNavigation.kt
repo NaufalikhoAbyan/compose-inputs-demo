@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.composeinputsdemo.MainScreen
+import com.example.composeinputsdemo.ui.screen.CheckboxScreen
 import com.example.composeinputsdemo.ui.screen.TextFieldScreen
 
 @Composable
@@ -17,6 +18,9 @@ fun GlobalNavigation(modifier: Modifier = Modifier) {
         }
         composable(route = Routes.TextField.name) {
             TextFieldScreen(navController = navController)
+        }
+        composable(route = Routes.Checkbox.name) {
+            CheckboxScreen(navController = navController)
         }
     }
 }
