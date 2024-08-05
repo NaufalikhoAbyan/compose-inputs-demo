@@ -72,6 +72,15 @@ fun MainScreen(modifier: Modifier = Modifier, navController: NavController = rem
 
                 Text(text = "Checkboxes")
             }
+            Button(
+                onClick = {
+                    navController.navigate(Routes.DatePicker.name)
+                },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+
+                Text(text = "Date Picker")
+            }
         }
     }
 }
