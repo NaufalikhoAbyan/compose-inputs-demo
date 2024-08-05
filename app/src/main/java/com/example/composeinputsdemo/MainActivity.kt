@@ -78,8 +78,15 @@ fun MainScreen(modifier: Modifier = Modifier, navController: NavController = rem
                 },
                 modifier = Modifier.fillMaxWidth()
             ) {
-
                 Text(text = "Date Picker")
+            }
+            Button(
+                onClick = {
+                    navController.navigate(Routes.Radio.name)
+                },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(text = "Radio")
             }
         }
     }
