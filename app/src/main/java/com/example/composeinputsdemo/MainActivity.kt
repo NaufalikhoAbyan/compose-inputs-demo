@@ -88,6 +88,14 @@ fun MainScreen(modifier: Modifier = Modifier, navController: NavController = rem
             ) {
                 Text(text = "Radio")
             }
+            Button(
+                onClick = {
+                    navController.navigate(Routes.Dropdown.name)
+                },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(text = "Dropdown")
+            }
         }
     }
 }

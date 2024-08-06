@@ -5,5 +5,6 @@ enum class Routes {
     TextField,
     Checkbox,
     DatePicker,
-    Radio
+    Radio,
+    Dropdown
 }

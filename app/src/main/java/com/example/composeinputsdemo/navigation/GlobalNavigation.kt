@@ -8,6 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.composeinputsdemo.MainScreen
 import com.example.composeinputsdemo.ui.screen.CheckboxScreen
 import com.example.composeinputsdemo.ui.screen.DatePickerDemoScreen
+import com.example.composeinputsdemo.ui.screen.DropdownScreen
 import com.example.composeinputsdemo.ui.screen.RadioScreen
 import com.example.composeinputsdemo.ui.screen.TextFieldScreen
 
@@ -29,6 +30,9 @@ fun GlobalNavigation(modifier: Modifier = Modifier) {
         }
         composable(route = Routes.Radio.name) {
             RadioScreen(navController = navController)
+        }
+        composable(route = Routes.Dropdown.name) {
+            DropdownScreen(navController = navController)
         }
     }
 }
